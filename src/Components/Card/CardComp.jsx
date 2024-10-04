@@ -40,7 +40,7 @@ function CardComp({ genreId, index_ }) {
       />
       <div
         ref={elementRef}
-        className="flex w-full gap-10 px-20 py-10 overflow-x-hidden  scrollbar-none scroll-smooth"
+        className="flex w-full gap-10 px-20 py-10 overflow-x-auto  scrollbar-none scroll-smooth"
       >
         {generList.map((item, index) => (
           <>

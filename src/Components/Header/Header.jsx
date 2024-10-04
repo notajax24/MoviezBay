@@ -7,6 +7,7 @@ import { IoMdHome } from "react-icons/io";
 import { MdMovie } from "react-icons/md";
 import { RiMovieFill } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
+import { FaSignInAlt } from "react-icons/fa";
 
 function Header() {
   const { user, isSignedIn } = useUser();
@@ -36,7 +37,9 @@ function Header() {
             </li>
             <li className="flex gap-2 py-2 font-bold hover:scale-105 ease-in hover:text-red-600 ">
               <FaRegHeart className="md:text-[20px] " />
-              <Link className="flex flex-row max-md:hidden">My List</Link>
+              <Link to={"/mylist"} className="flex flex-row max-md:hidden">
+                My List
+              </Link>
             </li>
           </ul>
         </div>
@@ -44,13 +47,14 @@ function Header() {
         {/* ---------------------- */}
         {isSignedIn ? (
           <Link to={"/dashboard"}>
-            <div className="flex gap-5 ">
+            <div className="flex gap-5">
               {/* <Button className="max-sm:hidden">Dashboard</Button> */}
               <UserButton />
             </div>
           </Link>
         ) : (
           <Link to={"auth/sign-in"}>
+            <FaSignInAlt className="flex mt-2 md:text-[20px] md:hidden" />
             <Button className="max-md:hidden">Sign In</Button>
           </Link>
         )}

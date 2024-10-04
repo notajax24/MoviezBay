@@ -4,7 +4,7 @@ import CardComp from "../Card/CardComp";
 
 function MoviesbyGenere() {
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-auto ">
       {GenereList.genere.map(
         (item, index) =>
           index <= 4 && (

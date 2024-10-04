@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Dashboard from "./Components/DashBoard/Dashboard.jsx";
 import Header from "./Components/Header/Header.jsx";
 import "./index.css";
+import MyList from "./Components/MyList/MyList.jsx";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
         element: <UserProfile />,
       },
     ],
+  },
+
+  {
+    path: "/mylist",
+    element: <MyList />,
   },
 
   {

@@ -52,14 +52,14 @@ function Card() {
         onClick={() => sliderRight(elementRef.current)}
       />
       <div
-        className="flex overflow-x-hidden   w-full py-10 px-20 md:gap-20 gap-5 scroll-smooth z-0 "
+        className="flex overflow-x-auto w-full py-10 px-20 md:gap-20 gap-5 scroll-smooth z-0 "
         ref={elementRef}
       >
         {movieList.map((item, index) => (
           <img
             key={index}
-            className="max-sm:w-[200px] h-[400px] object-cover object-left-top  rounded-lg  hover:border-[3px] border-gray-400 cursor-pointer
-        hover:scale-110 transition-all duration-150 ease-in 
+            className="max-sm:w-[200px] h-[400px] object-cover object-left-top  rounded-lg  md:hover:border-[3px] border-gray-400 cursor-pointer
+        md:hover:scale-110 transition-all duration-150 ease-in 
              "
             src={BASE_IAMGE_URL + item.poster_path}
           ></img>
